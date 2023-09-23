@@ -1,0 +1,56 @@
+:root {
+	--font-family: 'MullerRegular';
+	--content-width: 1420px;
+	--container-offset: 15px;
+	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+	--transition: 0.3s;
+	// colors
+	--default: #5a5a5a;
+	--light: #fff;
+	--accent: #cd1338;
+	--blue-light: #1c60f6;
+	--blue-middle: #00406c;
+	--blue-dark: #1c2e44;
+	--gray: #aaa;
+
+	// media
+	--big-desktop: 1600px;
+	--desktop: 1440px;
+	--small-desktop: 1280px;
+	--tablet: 1024px;
+	--small-tablet: 768px;
+	--mobile: 576px;
+}
+
+@media (max-width: 1600px) {
+	:root {
+		--content-width: 1420px;
+	}
+}
+
+@media (max-width: 1440px) {
+	:root {
+		--content-width: 1260px;
+	}
+}
+@media (max-width: 1280px) {
+	:root {
+		--content-width: 1160px;
+	}
+}
+@media (max-width: 1024px) {
+	:root {
+		--content-width: 900px;
+	}
+}
+@media (max-width: 768px) {
+	:root {
+		--content-width: 700px;
+	}
+}
+@media (max-width: 576px) {
+	:root {
+		--content-width: 100%;
+	}
+}

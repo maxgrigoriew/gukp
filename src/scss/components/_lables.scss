@@ -1,0 +1,67 @@
+.lables {
+	padding: 70px 0 28px;
+	&__title {
+		text-align: center;
+		color: var(--accent);
+		margin-bottom: 50px;
+		font-size: 48px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 42px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.lables {
+		padding: 46px 0 0;
+		&__list {
+			gap: 30px;
+		}
+		&__title {
+			font-size: 34px;
+			line-height: 34px;
+			letter-spacing: 2.38px;
+			margin-bottom: 37px;
+			transform-origin: center;
+		}
+		&__link img {
+			height: 34px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.lables {
+		&__list {
+			gap: 26px;
+		}
+		&__title {
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.lables {
+		&__list {
+			gap: 20px;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.lables {
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__link img {
+			height: 28px;
+		}
+	}
+}

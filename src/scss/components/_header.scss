@@ -1,0 +1,144 @@
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 20;
+	&.active {
+		background-image: linear-gradient(
+			90deg,
+			var(--blue-dark) 38.01%,
+			rgba(0, 64, 108, 0.53) 117.87%
+		);
+		backdrop-filter: blur(5px);
+	}
+	&__burger,
+	&__mobile-logo {
+		display: none;
+	}
+}
+
+.nav__list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap: 42px;
+	padding: 20px 0;
+}
+
+.nav__link {
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 30px;
+	text-transform: uppercase;
+	border-bottom: 1px solid transparent;
+	transition: all var(--transition);
+	&:hover {
+		color: var(--accent);
+	}
+	// transform: scale(1.11, 1);
+	// transform-origin: right;
+}
+
+@media (max-width: 1280px) {
+	.nav {
+		&__list {
+			padding: 14px 0;
+			column-gap: 30px;
+		}
+		&__link {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.header {
+		height: 60px;
+		background-color: var(--light);
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&.active {
+			background-image: none;
+		}
+		&__mobile-logo {
+			display: block;
+		}
+		&__burger {
+			align-self: center;
+			display: flex;
+			cursor: pointer;
+			height: 36px;
+			padding: 4px 0;
+			width: 36px;
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			& .line {
+				display: block;
+				height: 4px;
+				width: 100%;
+				border-radius: 10px;
+				background-color: var(--blue-middle);
+				transition: all var(--transition);
+			}
+
+			&.active {
+				.line1 {
+					transform: rotate(45deg) translate(4px, -4px);
+					transform-origin: left;
+				}
+				.line2 {
+					opacity: 0;
+				}
+				.line3 {
+					transform: rotate(-45deg) translate(3px, 6px);
+					transform-origin: left;
+				}
+			}
+		}
+		&__mobile-logo {
+			margin-left: calc(var(--container-offset) * -1);
+		}
+	}
+
+	.nav {
+		position: fixed;
+		transform: translateX(-100vw);
+		background-color: var(--light);
+		top: 60px;
+		left: 0;
+		right: 0;
+		min-height: calc(100vh - 60px);
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all var(--transition);
+		overflow-y: scroll;
+		&__list {
+			flex-direction: column;
+			padding: 20px 40px 60px;
+			gap: 20px 0;
+		}
+		&__link {
+			color: var(--blue-middle);
+			font-size: 21px;
+			line-height: 21px;
+			text-transform: uppercase;
+			padding: 20px;
+			transition: all var(--transition);
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		&.active {
+			transform: translateX(0);
+		}
+	}
+}
