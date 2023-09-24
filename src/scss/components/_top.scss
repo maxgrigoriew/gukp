@@ -1,0 +1,28 @@
+.top {
+	padding: 220px 0 120px;
+	background-image: url('../../img/top.jpg');
+	background-color: var(--gray-middle);
+	@include bg-cover;
+	margin-bottom: 60px;
+
+	&__inner {
+		color: var(--light);
+	}
+
+	&__title {
+		text-transform: uppercase;
+
+		& span {
+			color: var(--accent);
+		}
+	}
+
+	&__descr {
+		margin-bottom: 60px;
+	}
+
+	&__buttons {
+		@include flex;
+		column-gap: 24px;
+	}
+}
