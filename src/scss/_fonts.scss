@@ -1,10 +1,26 @@
-// @include font-face('Roboto Flex', '../fonts/RobotoFlex-Regular', 200, normal);
+@font-face {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-style: normal;
+	src:
+		url('../fonts/Ubuntu-Regular.ttf'),
+		url('../fonts/Ubuntu-Regular.woff2') format('woff2');
+}
 
 @font-face {
-	font-family: 'MullerRegular';
+	font-family: 'Ubuntu';
+	font-weight: 700;
 	font-style: normal;
-	font-weight: 400;
 	src:
-		local('MullerRegular'),
-		url('../fonts/MullerRegular.woff') format('woff');
+		url('../fonts/Ubuntu-Bold.ttf'),
+		url('../fonts/Ubuntu-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-weight: 900;
+	font-style: normal;
+	src:
+		url('../fonts/Ubuntu-Lato.ttf'),
+		url('../fonts/Ubuntu-Lato.woff2') format('woff2');
 }

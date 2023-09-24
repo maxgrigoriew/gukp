@@ -1,18 +1,18 @@
 :root {
-	--font-family: 'MullerRegular';
-	--content-width: 1420px;
+	--font-default: 'Ubuntu';
+	--font-accent: 'Lato';
+	--content-width: 1230px;
 	--container-offset: 15px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
 	--transition: 0.3s;
+
 	// colors
-	--default: #5a5a5a;
+	--gray-default: #787a80;
+	--gray-middle: #424551;
+	--gray-dark: #1e212c;
+
 	--light: #fff;
-	--accent: #cd1338;
-	--blue-light: #1c60f6;
-	--blue-middle: #00406c;
-	--blue-dark: #1c2e44;
-	--gray: #aaa;
+	--accent: #ff5a30;
 
 	// media
 	--big-desktop: 1600px;
