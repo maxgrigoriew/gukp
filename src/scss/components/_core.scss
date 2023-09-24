@@ -1,0 +1,39 @@
+.core {
+	&__list {
+		--mission-gap: 94px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-between;
+		column-gap: calc(var(--mission-gap) * 2);
+	}
+
+	&__item {
+		@include flex-column-center;
+
+		text-align: center;
+		position: relative;
+
+		&:not(:last-child)::before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			background-image: url('../../img/svg/core-line.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			top: 0;
+			right: calc(-1 * var(--mission-gap));
+		}
+	}
+
+	&__img {
+		width: 48px;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		color: var(--gray-dark);
+		margin-bottom: 6px;
+	}
+}
