@@ -115,6 +115,12 @@ a {
 	border: 1px solid var(--accent);
 	background-color: var(--accent);
 	transition: all var(--transition);
+
+	&--middle {
+		line-height: 41px;
+		padding: 0px 32px;
+		font-size: 14px;
+	}
 	&:hover {
 		background-color: #fc3300;
 	}
