@@ -1,0 +1,55 @@
+.header {
+	&--main {
+		background-color: var(--light);
+	}
+	&__inner {
+		padding: 20px 0;
+		@include flex-v-center;
+	}
+
+	&__logo {
+		margin-right: 60px;
+	}
+
+	&__nav {
+		margin-right: 10px;
+	}
+
+	&__list {
+		@include flex-v-center;
+		display: flex;
+		column-gap: 40px;
+	}
+
+	&__link {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: var(--gray-middle);
+	}
+
+	&__contacts {
+		@include flex-v-center;
+		column-gap: 36px;
+		margin-left: auto;
+
+		&-link {
+			@include flex-v-center;
+		}
+
+		&-icon {
+			margin-right: 20px;
+		}
+		&-title {
+			font-family: Ubuntu;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		&-text {
+			display: block;
+			font-size: 18px;
+			color: var(--gray-dark);
+		}
+	}
+}
