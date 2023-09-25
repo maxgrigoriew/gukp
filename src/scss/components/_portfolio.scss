@@ -45,16 +45,18 @@
 }
 
 .portfolio-slider {
+	padding-left: var(--grid-gap);
+	padding-right: var(--grid-gap);
+	padding-bottom: 85px;
 	&__item {
 		position: relative;
 		border-radius: var(--radius);
 		background: var(--light);
-		box-shadow:
-			0 4px 4px -4px rgba(30, 33, 44, 0.03),
-			0 12px 10px -6px rgba(154, 156, 165, 0.04),
-			0 30px 24px -10px rgba(154, 156, 165, 0.05),
-			0 80px 80px -20px rgba(154, 156, 165, 0.08);
-		overflow: hidden;
+		// box-shadow:
+		// 	0 4px 4px -4px rgba(30, 33, 44, 0.03),
+		// 	0 12px 10px -6px rgba(154, 156, 165, 0.04),
+		// 	0 30px 24px -10px rgba(154, 156, 165, 0.05),
+		// 	0 80px 80px -20px rgba(154, 156, 165, 0.08);
 		transition: all var(--transition);
 
 		&:hover {
@@ -63,8 +65,11 @@
 			}
 
 			.portfolio-slider__btn {
+				max-height: 43px;
 				opacity: 1;
 				display: inline-block;
+				margin-top: 24px;
+				animation: 0.5s 0s normal forwards 1 fadein;
 			}
 		}
 	}
@@ -78,9 +83,14 @@
 		height: 345px;
 		object-fit: cover;
 		object-position: top;
+		margin-bottom: 98px;
 	}
 
 	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		padding: 16px 20px 24px;
 		transform: translateY(0);
 		transition: var(--transition);
@@ -97,8 +107,21 @@
 	}
 
 	&__btn {
-		margin-top: 24px;
 		opacity: 0;
+		margin-top: 0;
+		max-height: 0;
 		transition: all var(--transition);
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
