@@ -5,6 +5,8 @@
 	--container-offset: 15px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 	--transition: 0.5s;
+	--radius: 4px;
+	--grid-gap: 30px;
 
 	// colors
 	--gray-default: #787a80;
